@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>661859732560-1fms91lqhtu19e9suscpglppse0e8pte.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.661859732560-1fms91lqhtu19e9suscpglppse0e8pte</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCjuOp4h7L_7zUu2pJIcVbMkzdvtCiznnI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>661859732560</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>nl.serpentin.Studify</string>
+	<key>PROJECT_ID</key>
+	<string>studify-d6335</string>
+	<key>STORAGE_BUCKET</key>
+	<string>studify-d6335.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:661859732560:ios:0abddf20989791ec</string>
+	<key>DATABASE_URL</key>
+	<string>https://studify-d6335.firebaseio.com</string>
+</dict>
+</plist>

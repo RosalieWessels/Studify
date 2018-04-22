@@ -19,7 +19,7 @@
 		63E28B331B9A337600FBF6E0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E28B2E1B9A337600FBF6E0 /* WelcomeViewController.swift */; };
 		63EBB3051D98004B004175E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EBB3041D98004B004175E5 /* LaunchScreen.storyboard */; };
 		7B4BBA89A1C4944A763A7275 /* Pods_Studify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CA638D6C8FDD8AAB6870BB /* Pods_Studify.framework */; };
-		8932C8A7208C10BB005039FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8932C8A6208C10BB005039FA /* GoogleService-Info.plist */; };
+		89A06765208C49B30075911B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89A06764208C49B30075911B /* GoogleService-Info.plist */; };
 		89C455F520815BA20056F9FD /* StudifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C455F420815BA20056F9FD /* StudifyViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,7 @@
 		63E28B2D1B9A337600FBF6E0 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		63E28B2E1B9A337600FBF6E0 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		63EBB3041D98004B004175E5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8932C8A6208C10BB005039FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		89A06764208C49B30075911B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		89C455F420815BA20056F9FD /* StudifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudifyViewController.swift; sourceTree = "<group>"; };
 		CACF061F59FA78E86DC4B329 /* Pods-Studify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Studify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Studify/Pods-Studify.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				6321A9BA1B94EBA10053D2E7 /* Info.plist */,
-				8932C8A6208C10BB005039FA /* GoogleService-Info.plist */,
+				89A06764208C49B30075911B /* GoogleService-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -219,9 +219,9 @@
 			files = (
 				63E28B291B9A336600FBF6E0 /* Main.storyboard in Resources */,
 				6321A9C31B94EBA10053D2E7 /* Images.xcassets in Resources */,
+				89A06765208C49B30075911B /* GoogleService-Info.plist in Resources */,
 				63EBB3051D98004B004175E5 /* LaunchScreen.storyboard in Resources */,
 				6321A9E51B94EBE70053D2E7 /* MessageCell.xib in Resources */,
-				8932C8A7208C10BB005039FA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
