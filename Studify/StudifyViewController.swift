@@ -14,7 +14,7 @@ class yourClassesTableView: UIColor {}
 
 class StudifyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
-    var studifyArray : [Message] = [Message]()
+    var homeworkArray : [Message] = [Message]()
     
     //Studify IBOutlets
     @IBOutlet var yourHomeworkTableView: UITableView!
@@ -25,16 +25,22 @@ class StudifyViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         //TODO: Set yourself as the delegate and datasource here:
-//        yourHomeworkTableView.delegate = self
-//        yourHomeworkTableView.dataSource = self
+        yourHomeworkTableView.delegate = self
+        yourHomeworkTableView.dataSource = self
 //        
 //        yourClassesTableView.delegate = self
 //        yourClassesTableView.dataSource = self
+        
+        yourHomeworkTableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "CustomMessageCell")
+        
+        configureHomeworkTableView()
+        retrieveHomework()
+        
+        yourHomeworkTableView.separatorStyle = .singleLine
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return studifyArray.count
+        return homeworkArray.count
    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,7 +50,32 @@ class StudifyViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    func configureHomeworkTableView(){
+        yourHomeworkTableView.rowHeight = UITableViewAutomaticDimension
+        yourHomeworkTableView.estimatedRowHeight = 120.0
+    }
     
+    func retrieveHomework(){
+        
+        let homeworkDB = Database.database().reference().child("Homework")
+        
+        homeworkDB.observe(.childAdded){ (snapshot) in
+            
+            let snapshotValue = snapshot.value as! Dictionary<String, String>
+            let title = snapshotValue["Title"]!
+            let teacher = snapshotValue["Teacher"]!
+            
+            let homework = Message()
+            homework.title = title
+            homework.teacher = teacher
+            
+            self.homeworkArray.append(homework)
+            
+            self.configureHomeworkTableView()
+            self.yourHomeworkTableView.reloadData()
+        }
+        
+    }
     
 
     
