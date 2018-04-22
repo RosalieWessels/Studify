@@ -20,6 +20,7 @@
 		63EBB3051D98004B004175E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EBB3041D98004B004175E5 /* LaunchScreen.storyboard */; };
 		7B4BBA89A1C4944A763A7275 /* Pods_Studify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CA638D6C8FDD8AAB6870BB /* Pods_Studify.framework */; };
 		89A06765208C49B30075911B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89A06764208C49B30075911B /* GoogleService-Info.plist */; };
+		89A06767208CE0A80075911B /* AddHomeworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A06766208CE0A80075911B /* AddHomeworkViewController.swift */; };
 		89C455F520815BA20056F9FD /* StudifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C455F420815BA20056F9FD /* StudifyViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		63E28B2E1B9A337600FBF6E0 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		63EBB3041D98004B004175E5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89A06764208C49B30075911B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		89A06766208CE0A80075911B /* AddHomeworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHomeworkViewController.swift; sourceTree = "<group>"; };
 		89C455F420815BA20056F9FD /* StudifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudifyViewController.swift; sourceTree = "<group>"; };
 		CACF061F59FA78E86DC4B329 /* Pods-Studify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Studify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Studify/Pods-Studify.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 		6321A9EA1B94EC0A0053D2E7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				89A06766208CE0A80075911B /* AddHomeworkViewController.swift */,
 				89C455F420815BA20056F9FD /* StudifyViewController.swift */,
 				63E28B2A1B9A337600FBF6E0 /* AppDelegate.swift */,
 				63E28B2B1B9A337600FBF6E0 /* ChatViewController.swift */,
@@ -299,6 +302,7 @@
 				63E28B331B9A337600FBF6E0 /* WelcomeViewController.swift in Sources */,
 				63E28B251B9A335300FBF6E0 /* Message.swift in Sources */,
 				6321A9E21B94EBE70053D2E7 /* CustomMessageCell.swift in Sources */,
+				89A06767208CE0A80075911B /* AddHomeworkViewController.swift in Sources */,
 				63E28B321B9A337600FBF6E0 /* RegisterViewController.swift in Sources */,
 				63E28B311B9A337600FBF6E0 /* LogInViewController.swift in Sources */,
 				89C455F520815BA20056F9FD /* StudifyViewController.swift in Sources */,
