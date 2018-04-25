@@ -10,6 +10,8 @@ class Message {
     
     var title: String = " "
     var teacher: String = " "
-    
+    var done: Int = 0
     
 }
+
+

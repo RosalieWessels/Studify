@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AddHomeworkViewController: UIViewController {
     
@@ -67,6 +68,26 @@ class AddHomeworkViewController: UIViewController {
         
         other = otherTextField.text!
         otherLabel.text = "\(other)"
+        
+        //Send Homework to Firebase and save it in the database.
+        
+        let homeworkDB = Database.database().reference().child("Homework")
+        let homeworkDictionary = ["Title": homeworkName, "Teacher": teacher]
+        
+        homeworkDB.childByAutoId().setValue(homeworkDictionary){
+            (error, reference) in
+            
+            if error != nil{
+                print(error!)
+            }
+            else{
+                print("Homework saved succesfully")
+                self.performSegue(withIdentifier: "BackToHomeworkOverView", sender: self)
+            }
+        }
+        
+        
+        
         
     }
     

@@ -12,7 +12,11 @@ class CustomMessageCell: UITableViewCell {
 
     @IBOutlet var messageBackground: UIView!
     @IBOutlet var avatarImageView: UIImageView!
+    
+    //title
     @IBOutlet var messageBody: UILabel!
+    
+    //teacher
     @IBOutlet var senderUsername: UILabel!
     
     override func awakeFromNib() {

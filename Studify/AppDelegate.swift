@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         //TODO: Initialise and Configure your Firebase here:
-        let studifyDatabase = Database.database().reference()
-        studifyDatabase.setValue("First piece of homework in Studify")
+        //let studifyDatabase = Database.database().reference()
+        //studifyDatabase.setValue("First piece of homework in Studify")
     
         
         return true
