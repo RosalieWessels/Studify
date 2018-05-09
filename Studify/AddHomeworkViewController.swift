@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Foundation
 
 class AddHomeworkViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -28,8 +29,17 @@ class AddHomeworkViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     //Due Date
     var dueDate: String = ""
-    @IBOutlet weak var dueDateTextField: UITextField!
-
+    @IBOutlet var dueDatePicker: UIDatePicker!
+    
+    @IBAction func dueDateChanged(_ sender: UIDatePicker) {
+        var timeFormatter = DateFormatter()
+        timeFormatter.dateStyle = DateFormatter.Style.short
+        
+        dueDate = timeFormatter.string(from: sender.date)
+        print(dueDate)
+    }
+    
+    
     
     //Description
     var descriptiontextbox: String = ""
@@ -72,10 +82,6 @@ class AddHomeworkViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         
         teacher = teacherTextField.text!
-    
-
-        
-        dueDate = dueDateTextField.text!
 
         
         descriptiontextbox = descriptionTextField.text!
