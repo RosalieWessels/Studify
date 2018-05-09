@@ -159,6 +159,8 @@ class StudifyViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         homeworkDone(nameOfHomework: homeworkArray[indexPath.row].title)
         
+        self.performSegue(withIdentifier: "GoToExpandHomework", sender: self)
+        
         //deleting the cell
         self.homeworkArray.remove(at: indexPath.row)
         self.yourHomeworkTableView.deleteRows(at: [indexPath], with: .fade)
@@ -174,6 +176,22 @@ class StudifyViewController: UIViewController, UITableViewDelegate, UITableViewD
         let autoID = ""
         //homeworkDB.child(autoID).remove
     }
+    
+    @IBAction func logOutButtonPressed(_ sender: Any) {
+        
+        print("We are trying to logout")
+        do{
+            try Auth.auth().signOut()
+            print("User is signed out")
+            navigationController?.popViewController(animated: true)
+            print("User is at homescreen")
+        }
+        catch{
+            print("error, there was a problem signing out.")
+        }
+
+    }
+    
     
 
     

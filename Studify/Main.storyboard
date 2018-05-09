@@ -328,11 +328,22 @@
                                     </connections>
                                 </button>
                             </barButtonItem>
+                            <barButtonItem title="Log Out" style="plain" id="hHX-D0-hpt">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Nu-av-y4W">
+                                    <rect key="frame" x="121" y="7" width="55" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Log Out"/>
+                                    <connections>
+                                        <action selector="logOutButtonPressed:" destination="v0r-4Y-nRM" eventType="touchUpInside" id="jmA-Qb-WjD"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="yourClassesTableView" destination="a95-qz-paE" id="5Fo-5m-WY6"/>
                         <outlet property="yourHomeworkTableView" destination="dBD-6i-L3Q" id="S7o-1Z-5cx"/>
+                        <segue destination="Zop-Ac-Rxb" kind="push" identifier="GoToExpandHomework" id="5ZL-tE-Jct"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PvB-WX-uBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -506,6 +517,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqr-Rm-4Gn" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1944" y="-441"/>
+        </scene>
+        <!--Expand Homework-->
+        <scene sceneID="v9Y-8x-i6R">
+            <objects>
+                <viewController title="Expand Homework" id="Zop-Ac-Rxb" customClass="ExpandHomework" customModule="Studify" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eDz-FM-1gi"/>
+                        <viewControllerLayoutGuide type="bottom" id="9EP-J1-v5L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yCS-xH-aXT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Isu-0r-4Ar"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dtb-h1-L3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2455" y="-42"/>
         </scene>
         <!--Leaderboard-->
         <scene sceneID="jgN-kA-nYR">
@@ -693,6 +723,6 @@
         <image name="AppBackground" width="698" height="1066"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BT2-Dg-9tQ"/>
+        <segue reference="4Et-8I-aB7"/>
     </inferredMetricsTieBreakers>
 </document>
