@@ -81,6 +81,10 @@ class AddHomeworkViewController: UIViewController, UIPickerViewDelegate, UIPicke
         homeworkName = homeworkTitle.text!
         
         
+    //ClassPicker
+        var selectedValue = pickerData[classPicker.selectedRow(inComponent: 0)]
+
+        
         teacher = teacherTextField.text!
 
         
@@ -93,7 +97,7 @@ class AddHomeworkViewController: UIViewController, UIPickerViewDelegate, UIPicke
         //Send Homework to Firebase and save it in the database.
         
         let homeworkDB = Database.database().reference().child("Homework")
-        let homeworkDictionary = ["Title": homeworkName, "Teacher": teacher]
+        let homeworkDictionary = ["Title": homeworkName, "Class" : selectedValue, "Teacher": teacher, "DueDate" : dueDate]
         
         homeworkDB.childByAutoId().setValue(homeworkDictionary){
             (error, reference) in
