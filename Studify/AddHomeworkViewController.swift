@@ -9,65 +9,80 @@
 import UIKit
 import Firebase
 
-class AddHomeworkViewController: UIViewController {
+class AddHomeworkViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     //Homework Title
     var homeworkName: String = ""
     @IBOutlet weak var homeworkTitle: UITextField!
-    @IBOutlet weak var titleLabel: UILabel!
+
+    //ClassPicker
+    @IBOutlet var classPicker: UIPickerView!
+    var pickerData: [String] = [String]()
     
-    //Class Name
-    var className: String = ""
-    @IBOutlet weak var classNameTextField: UITextField!
-    @IBOutlet weak var classNameLabel: UILabel!
     
     //Teacher
     var teacher: String = ""
     @IBOutlet weak var teacherTextField: UITextField!
-    @IBOutlet weak var teacherLabel: UILabel!
-    
-    //Assigned Date
-    var assignedDate: String = ""
-    @IBOutlet weak var assignedDateTextField: UITextField!
-    @IBOutlet weak var assignedDateLabel: UILabel!
+
+
     
     //Due Date
     var dueDate: String = ""
     @IBOutlet weak var dueDateTextField: UITextField!
-    @IBOutlet weak var dueDateLabel: UILabel!
+
     
     //Description
     var descriptiontextbox: String = ""
     @IBOutlet weak var descriptionTextField: UITextField!
-    @IBOutlet weak var descriptionLabel: UILabel!
+
     
     //Other
     var other: String = ""
     @IBOutlet weak var otherTextField: UITextField!
-    @IBOutlet weak var otherLabel: UILabel!
+
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.classPicker.delegate = self
+        self.classPicker.dataSource = self
+        pickerData = ["English", "Math", "Science", "History", "PE", "Chinese", "French", "Computer Science" ]
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    
+    // The number of rows of data
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    // The data to return for the row and component (column) that's being passed in
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+
+    
     
     //DONE
     @IBAction func DoneButton(_ sender: Any) {
         homeworkName = homeworkTitle.text!
-        titleLabel.text = "\(homeworkName)"
         
-        className = classNameTextField.text!
-        classNameLabel.text = "\(className)"
         
         teacher = teacherTextField.text!
-        teacherLabel.text = "\(teacher)"
-        
-        assignedDate = assignedDateTextField.text!
-        assignedDateLabel.text = "\(assignedDate)"
+    
+
         
         dueDate = dueDateTextField.text!
-        dueDateLabel.text = "\(dueDate)"
+
         
         descriptiontextbox = descriptionTextField.text!
-        descriptionLabel.text = "\(descriptiontextbox)"
+
         
         other = otherTextField.text!
-        otherLabel.text = "\(other)"
+
         
         //Send Homework to Firebase and save it in the database.
         

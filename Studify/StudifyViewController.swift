@@ -159,22 +159,13 @@ class StudifyViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         homeworkDone(nameOfHomework: homeworkArray[indexPath.row].title)
         
-        self.performSegue(withIdentifier: "GoToExpandHomework", sender: self)
+//        self.performSegue(withIdentifier: "GoToExpandHomework", sender: self)
         
         //deleting the cell
         self.homeworkArray.remove(at: indexPath.row)
         self.yourHomeworkTableView.deleteRows(at: [indexPath], with: .fade)
         
-        deleteItemFromFirebase()
         
-    }
-    
-    func deleteItemFromFirebase(){
-        
-         let homeworkDB = Database.database().reference().child("Homework")
-        
-        let autoID = ""
-        //homeworkDB.child(autoID).remove
     }
     
     @IBAction func logOutButtonPressed(_ sender: Any) {
