@@ -50,6 +50,7 @@ class StudifyViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         homeworkCell.messageBody.text = homeworkArray[indexPath.row].title
         homeworkCell.senderUsername.text = homeworkArray[indexPath.row].teacher
+        homeworkCell.dueDateBody.text = homeworkArray[indexPath.row].dueDate
 
         if homeworkArray[indexPath.row].done == 0{
             homeworkCell.avatarImageView.image = UIImage(named: "ZeroOfFourDone")
@@ -92,12 +93,17 @@ class StudifyViewController: UIViewController, UITableViewDelegate, UITableViewD
             let snapshotValue = snapshot.value as! Dictionary<String, String>
             let title = snapshotValue["Title"]!
             let teacher = snapshotValue["Teacher"]!
+            let classOfHomework = snapshotValue["Class"]!
+            let dueDate = snapshotValue["DueDate"]!
             
             let homework = Message()
             homework.title = title
             homework.teacher = teacher
+            homework.className = classOfHomework
+            homework.dueDate = dueDate
             print("homework Title: \(title)")
             print("homework Teacher: \(teacher)")
+            print("Homework DueDate: \(dueDate)")
             
             self.homeworkArray.append(homework)
             

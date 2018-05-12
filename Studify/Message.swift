@@ -14,7 +14,8 @@ class Message {
     var teacher: String = " "
     var className: String = " "
     var assignedDate: Date = Date.init(timeIntervalSinceNow: 0)
-    var dueDate: Date = Date.init(timeIntervalSinceNow: 0)
+    //var dueDate: Date = Date.init(timeIntervalSinceNow: 0)
+    var dueDate: String = ""
     var description: String = " "
     var other: String = " "
     var done: Int = 0

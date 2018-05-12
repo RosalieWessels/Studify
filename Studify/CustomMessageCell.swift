@@ -15,6 +15,7 @@ class CustomMessageCell: UITableViewCell {
     
     //title
     @IBOutlet var messageBody: UILabel!
+    @IBOutlet var dueDateBody: UILabel!
     
     //teacher
     @IBOutlet var senderUsername: UILabel!
